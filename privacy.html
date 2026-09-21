@@ -15,11 +15,13 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px 16px}
 
 
 
+<p>Last updated: 21 September 2026.</p>
+
 <h2>Who we are</h2>
-<p>Delibuddy is a community-based, not-for-profit project operated by MJH Sunny. It is run by riders, for riders. Contact: theaark.co@gmail.com.</p>
+<p>Delibuddy is a community-based, not-for-profit project operated by MJH Sunny. It is built for the people who use it. Contact: theaark.co@gmail.com.</p>
 
 <h2>What the app does</h2>
-<p>Delibuddy helps food-delivery couriers decide where and when to wait for orders. It never connects to, automates, or reads data from Uber Eats, Glovo, Bolt Food or any other platform. Everything it knows comes from what you type or tap, from files you choose to import, and from public data sources (weather, holidays, sports fixtures, OpenStreetMap).</p>
+<p>Delibuddy helps food-delivery couriers decide where and when to wait for orders, and lets them talk to each other in a community chat. It never connects to, automates, or reads data from Uber Eats, Glovo, Bolt Food or any other platform. Everything it knows comes from what you type or tap, from files you choose to import, and from public data sources (weather, holidays, sports fixtures, OpenStreetMap).</p>
 
 <h2>Data we collect</h2>
 <ul><li>Account: email, display name, password (stored hashed), language.</li>
@@ -27,29 +29,57 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:24px 16px}
 <li>Activity you log: shift start/end, order taps (got, arrived, picked up, delivered, cancelled), the restaurant you pick, the fee you enter, tips, your Next-move choices and quick observations.</li>
 <li>Location: a precise GPS point at each tap, and a point every 90 seconds while your wait timer is running and the app is open. We never track location in the background or while the app is closed.</li>
 <li>Imports: orders you import from your Uber weekly statement CSV.</li>
+<li>Chat: your handle and chosen avatar, the messages you send and the rooms you send them in, your reactions and poll votes, the groups you belong to, reports you make, and the people you block. A message may include a map pin, a poll, a help request or a help alert, as described below.</li>
+<li>Notifications: if you allow them, a device token for your phone, plus its platform, the app version and your language, so an alert can reach you when the app is closed. We also keep a record of each alert we tried to deliver (which message, which room, how many devices were reached).</li>
 <li>Technical: app version, device model, sync errors.</li>
 </ul>
 <h2>How we use it</h2>
 <ul><li>To build your personal statistics (euros per hour by zone, corner, hour).</li>
 <li>To compute community aggregates that all riders see: average wait per corner, expected orders per zone, number of riders currently in a zone.</li>
 <li>To improve the prediction model (a nightly statistical model and, when enabled, an AI assistant that explains recommendations).</li>
+<li>To carry your chat messages to the rooms you send them in, and to notify you of a help alert or a message that mentions you.</li>
+<li>To review reports and keep the chat usable.</li>
 </ul>
 <h2>What other riders can see</h2>
-<p>Only aggregates: a corner&#x27;s average wait, a zone&#x27;s expected value, a count of riders in a zone. Never your name, your income, your trail, or that you were at a specific place at a specific time.</p>
+<p>Only aggregates: a corner&#x27;s average wait, a zone&#x27;s expected value, a count of riders in a zone. Never your name, your income, your trail, or that you were at a specific place at a specific time. What you post in the chat is separate, and is described in the next sections.</p>
+
+<h2>Community chat</h2>
+<p>The app has a chat with four kinds of room. There is one Everyone room open to every signed-in rider; one Safety room that everyone can read and only the operator can post in; area rooms, which you can read and write only while you are within a radius of the area&#x27;s centre that the operator sets; and private groups, which a rider asks for and which exist only after the operator approves them. Access to an area room is granted from a position your own app reports, lasts six hours and is then refreshed. You see only the area rooms you currently have access to.</p>
+<p>Messages are text only, at most 1000 characters. No photos can be uploaded. A message may also carry a map pin, a poll, an alert about a restaurant or a road, a request for practical help, or a shift-buddy proposal.</p>
+
+<h2>Your name in the chat</h2>
+<p>Every account is given a randomly generated handle, such as RedVelvet26, when the profile is created, together with one of the app&#x27;s built-in avatars. That handle and avatar are what other riders see. Your real name and your email address are not shown in the Everyone room, the Safety room or any area room. You can change your handle, and if you clear it the app falls back to your display name, so we advise keeping a handle.</p>
+<p>There is one exception, and it is important. <strong>The admin of a private group sees the real name and the email address of every member of that group.</strong> Other members of the same group see only your handle and avatar. The app tells you this on the screen where you join a group, before you join, and it is repeated in your chat profile. If you do not want a group&#x27;s admin to have your real name and email, do not join that group. The operator can see all chat content, including the content of private groups, in order to answer reports and run the service.</p>
+
+<h2>Location in the chat</h2>
+<p>The chat never tracks you. There is no live location sharing and no background tracking of any kind. Location enters the chat in only two ways, both of which you start yourself: a pin, which is a single point with a label that you choose to post once; and a help alert, which carries your position and refreshes it while the app is open on your screen, for as long as the alert is running. Nothing is sent when the app is closed or in the background.</p>
+
+<h2>The help alert (SOS)</h2>
+<p><strong>The help alert is not an emergency service.</strong> It sends a message to the people in your own private groups, and to nobody else. It does not reach the police, an ambulance, the fire service or any other emergency service, and no operator is watching for it. If you or somebody else is in danger, call 112 yourself; the app offers a Call 112 button next to every alert for exactly this reason.</p>
+<p>When you send an alert, the people in your private groups receive your position, your handle and the time. It is not sent to the Everyone room, to the Safety room or to any area room. While the app is open on your screen your position is refreshed so that somebody coming to you knows where you are; you can end the alert yourself with &quot;I&#x27;m safe&quot;, and the app marks it expired after 30 minutes in any case. You can send at most three alerts in any 24 hours. Replies to an alert (for example &quot;I&#x27;m coming&quot;) are stored with it.</p>
+
+<h2>Emergency contacts</h2>
+<p>You may save one to three people to text when there is no connection. These names and phone numbers are stored on your phone only. They are never uploaded to our servers, never synced between devices, never included in an export, and nobody else can see them. Deleting the app deletes them.</p>
+
+<h2>Notifications</h2>
+<p>So that a help alert can reach a phone that is asleep or has the app closed, the app registers a notification token for that install with our server and sends the notification through Firebase Cloud Messaging, a Google service. The notification carries your handle, the room name and the message reference — never your real name, because a lock screen is a public surface. Permission is asked only the first time you open an approved private group or your emergency contacts, never at first launch, and if you decline you are not asked again. You can turn notifications off in your phone&#x27;s settings; the token is removed when you sign out.</p>
+
+<h2>Reports and moderation</h2>
+<p>In the Everyone room and in area rooms you can report a message to the operator and hide a user from your own view. In a private group, the group&#x27;s admin can also remove or block a member of that group. A message reported by three different riders is hidden automatically until it is reviewed. The operator reviews reports and can hide a message, mute an account, reset a handle or suspend an account. Reports, the message they concern, and a record of the actions taken are kept while the service runs, so that repeated behaviour can be recognised; they are not published and are seen only by the operator. A report you made about somebody else is kept, with your identity removed, if you delete your account.</p>
 
 <h2>Where data is stored</h2>
-<p>On your phone (local database) and, when cloud sync is on, on Supabase servers in Paris, France (EU). Backups are kept for 7 days.</p>
+<p>On your phone (local database) and, when cloud sync is on, on Supabase servers in Paris, France (EU). Chat messages, groups, reports and notification tokens are stored on those same Supabase servers; a message you write with no connection waits on your phone until it can be sent. Emergency contacts are the exception: they stay on your phone and are never uploaded. Backups are kept for 7 days.</p>
 
-<h2>Maps</h2>
-<p>The map is provided by Google Maps. When you open the map tab, your phone requests map tiles from Google for the area you are looking at, and Google receives the usual technical data of such requests (IP address, device identifiers used by Google Play services, the map area). Delibuddy does not send your account, your orders or your logged positions to Google. Once a month the Delibuddy server also queries the Google Places API for restaurant listings around each delivery zone; that request carries only the zone&#x27;s position and no rider data. Google&#x27;s handling of this data is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+<h2>Google services</h2>
+<p>The map is provided by Google Maps. When you open the map tab, your phone requests map tiles from Google for the area you are looking at, and Google receives the usual technical data of such requests (IP address, device identifiers used by Google Play services, the map area). Delibuddy does not send your account, your orders or your logged positions to Google. Once a month the Delibuddy server also queries the Google Places API for restaurant listings around each delivery zone; that request carries only the zone&#x27;s position and no rider data. Notifications are delivered by Firebase Cloud Messaging, which is also a Google service: your notification token is held by Google in order to reach your phone, and the alert we hand to it carries your handle, the room name and the message reference. Google&#x27;s handling of this data is described in the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
 <h2>AI assistant</h2>
 <p>When the owner enables it, the app may send an anonymous summary of the current situation (zone, hour, weather, expected values, no personal identifiers) to Anthropic&#x27;s Claude API to write an explanation in plain words. You can see whether it is enabled in Settings.</p>
 
 <h2>Your rights (GDPR)</h2>
-<p>Export all your data from Settings at any time. Delete your account from Settings: your identity and personal records are removed within 30 days; anonymous contributions to community averages (a wait time at a corner) may be kept. Write to theaark.co@gmail.com for access, correction or full erasure.</p>
+<p>Export all your data from Settings at any time. Delete your account from Settings: your identity and personal records are removed within 30 days; anonymous contributions to community averages (a wait time at a corner) may be kept. Deleting your account also removes your email, names, handle and avatar, empties the text of your chat messages, ends your group memberships and area access, and removes your notification tokens, your block list and your reactions. Write to theaark.co@gmail.com for access, correction or full erasure.</p>
 
 <h2>Retention</h2>
-<p>Personal activity data: 24 months, then anonymised. Account data: until you delete the account.</p>
+<p>Personal activity data: 24 months, then anonymised. Account data: until you delete the account. Chat messages, groups and moderation records have no fixed expiry: they are kept while the service runs and while your account exists, and go when you delete a message or delete your account, except that a report you made about somebody else is kept with your identity removed. Notification tokens are kept while the install is in use and are removed when you sign out or delete your account.</p>
 
 <h2>Children</h2>
 <p>Delibuddy is for adults who work as couriers. We do not knowingly collect data from anyone under 18.</p>
